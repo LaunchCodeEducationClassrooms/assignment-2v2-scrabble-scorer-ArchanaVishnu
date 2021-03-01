@@ -1,7 +1,7 @@
 // inspired by https://exercism.io/tracks/javascript/exercises/etl/solutions/91f99a3cca9548cebe5975d7ebca6a85
 
 const input = require("readline-sync");
-
+let String;
 const oldPointStructure = {
   1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'],
   2: ['D', 'G'],
@@ -33,10 +33,16 @@ function oldScrabbleScorer(word) {
 // don't change the names or your program won't work as expected. //
 
 function initialPrompt() {
-   console.log("Let's play some scrabble! Enter a word:");
+   console.log("Let's play some scrabble!");
+
+  String=input.question("Enter a word to score :");
+
 };
 
 let simpleScore;
+function simpleScore(){
+
+};
 
 let vowelBonusScore;
 
@@ -52,7 +58,8 @@ let newPointStructure;
 
 function runProgram() {
    initialPrompt();
-   
+   let points= oldScrabbleScorer(String);
+   console.log(points);
 }
 
 // Don't write any code below this line //
